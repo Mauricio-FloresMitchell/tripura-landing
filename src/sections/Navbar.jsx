@@ -10,31 +10,34 @@ function Navbar() {
 
         <nav className="hidden md:flex items-center gap-8 text-slate-700 font-medium">
 
-          <a href="#" className="hover:text-sky-600 transition">
+          <a href="#inicio" className="hover:text-sky-600 transition">
             Inicio
           </a>
 
-          <a href="#" className="hover:text-sky-600 transition">
+          <a href="#servicios" className="hover:text-sky-600 transition">
             Productos
           </a>
 
-          <a href="#" className="hover:text-sky-600 transition">
+          <a href="#nosotros" className="hover:text-sky-600 transition">
             Nosotros
           </a>
 
-          <a href="#" className="hover:text-sky-600 transition">
+          <a href="#contacto" className="hover:text-sky-600 transition">
             Empresas
           </a>
 
-          <a href="#" className="hover:text-sky-600 transition">
+          <a href="#contacto" className="hover:text-sky-600 transition">
             Contacto
           </a>
 
         </nav>
 
-        <button className="bg-sky-600 hover:bg-sky-500 transition text-white px-5 py-3 rounded-xl font-semibold">
+        <a
+          href="#contacto"
+          className="bg-sky-600 hover:bg-sky-500 transition text-white px-5 py-3 rounded-xl font-semibold"
+        >
           Pedir agua
-        </button>
+        </a>
 
       </div>
 

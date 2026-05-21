@@ -19,23 +19,22 @@ function Contact() {
 
   const handleWhatsApp = () => {
 
-    const mensaje = `
-Hola, quiero realizar un pedido de agua.%0A%0A
-👤 Nombre: ${formData.nombre}%0A
-📞 Teléfono: ${formData.telefono}%0A
-📍 Dirección: ${formData.direccion}%0A
-💧 Producto: ${formData.producto}%0A
-🛒 Cantidad: ${formData.cantidad} garrafón(es)
-`
+    const mensaje = `Hola, quiero realizar un pedido de agua.
+
+👤 Nombre: ${formData.nombre}
+📞 Teléfono: ${formData.telefono}
+📍 Dirección: ${formData.direccion}
+💧 Producto: ${formData.producto}
+🛒 Cantidad: ${formData.cantidad} garrafón(es)`
 
     window.open(
-      `https://wa.me/527206073820?text=${mensaje}`,
+      `https://wa.me/527206073820?text=${encodeURIComponent(mensaje)}`,
       '_blank'
     )
   }
 
   return (
-    <section className="py-32 px-6 bg-white">
+    <section id="contacto" className="py-32 px-6 bg-white">
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
