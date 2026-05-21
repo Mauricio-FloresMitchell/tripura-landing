@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-sky-50 to-white px-6">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-sky-50 to-white px-6">
 
       {/* Glow */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-300/30 blur-[120px] rounded-full"></div>
@@ -28,13 +28,21 @@ function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-5">
 
-            <button className="bg-sky-600 hover:bg-sky-500 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105">
+            <a
+              href="https://wa.me/527206073820"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-sky-600 hover:bg-sky-500 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 text-center"
+            >
               Pedir por WhatsApp
-            </button>
+            </a>
 
-            <button className="border border-sky-200 hover:border-sky-500 hover:text-sky-600 px-8 py-4 rounded-2xl transition-all duration-300">
+            <a
+              href="#servicios"
+              className="border border-sky-200 hover:border-sky-500 hover:text-sky-600 px-8 py-4 rounded-2xl transition-all duration-300 text-center"
+            >
               Ver productos
-            </button>
+            </a>
 
           </div>
 

@@ -1,6 +1,6 @@
 function Services() {
   return (
-    <section className="py-32 px-6 bg-sky-50">
+    <section id="servicios" className="py-32 px-6 bg-sky-50">
 
       <div className="max-w-7xl mx-auto">
 
@@ -62,9 +62,12 @@ function Services() {
 
             </ul>
 
-            <button className="w-full bg-sky-600 hover:bg-sky-500 text-white py-4 rounded-2xl font-semibold transition-all duration-300">
+            <a
+              href="#contacto"
+              className="block text-center w-full bg-sky-600 hover:bg-sky-500 text-white py-4 rounded-2xl font-semibold transition-all duration-300"
+            >
               Pedir ahora
-            </button>
+            </a>
 
           </div>
 
@@ -109,9 +112,12 @@ function Services() {
 
               </ul>
 
-              <button className="w-full bg-sky-500 hover:bg-sky-400 text-slate-900 py-4 rounded-2xl font-semibold transition-all duration-300">
+              <a
+                href="#contacto"
+                className="block text-center w-full bg-sky-500 hover:bg-sky-400 text-slate-900 py-4 rounded-2xl font-semibold transition-all duration-300"
+              >
                 Pedir ahora
-              </button>
+              </a>
 
             </div>
 

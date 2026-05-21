@@ -48,6 +48,7 @@ function Footer() {
               href="https://www.facebook.com/tripuramxtlalnepantla/?locale=es_LA"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook de Tripura"
               className="w-12 h-12 rounded-full bg-slate-800 hover:bg-sky-600 transition flex items-center justify-center"
             >
               <FaFacebookF />
@@ -57,6 +58,7 @@ function Footer() {
               href="https://www.instagram.com/tripura.mx/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram de Tripura"
               className="w-12 h-12 rounded-full bg-slate-800 hover:bg-sky-600 transition flex items-center justify-center"
             >
               <FaInstagram />
@@ -66,6 +68,7 @@ function Footer() {
               href="https://wa.me/527206073820"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp de Tripura"
               className="w-12 h-12 rounded-full bg-slate-800 hover:bg-green-500 transition flex items-center justify-center"
             >
               <FaWhatsapp />
