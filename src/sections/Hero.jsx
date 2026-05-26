@@ -18,15 +18,15 @@ function Hero() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-black leading-tight text-white mb-8">
-            Agua purificada
+            Tu agua purificada de confianza
             <span className="block text-[#BCD0E3]">
-              hasta tu hogar
+              en Tlalnepantla
             </span>
           </h1>
 
           <p className="text-[#BCD0E3] text-lg md:text-xl leading-relaxed mb-10">
-            Servicio rápido y confiable de agua purificada y alcalina
-            en Vista Hermosa y zonas cercanas de Tlalnepantla.
+            Entrega rápida y confiable para hogares y empresas
+            en Vista Hermosa y zonas cercanas.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5">
