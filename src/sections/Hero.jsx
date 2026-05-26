@@ -1,3 +1,5 @@
+import heroImage from '../assets/hero-image.jpg'
+
 function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-[#0C1F3F] px-6 pt-24">
@@ -55,7 +57,7 @@ function Hero() {
           <div className="absolute w-[350px] h-[350px] bg-[#239CBC]/30 blur-[100px] rounded-full"></div>
 
           <img
-            src="https://images.unsplash.com/photo-1564419320408-38e24e038739?q=80&w=1200&auto=format&fit=crop"
+            src={heroImage}
             alt="Agua purificada"
             className="relative z-10 w-full max-w-lg rounded-3xl border border-[#BCD0E3]/30 shadow-2xl shadow-[#0C1F3F]/60 object-cover"
           />
