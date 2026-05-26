@@ -31,7 +31,7 @@ function Navbar() {
             Nosotros
           </a>
 
-          <a href="#contacto" className="hover:text-white transition">
+          <a href="#empresas" className="hover:text-white transition">
             Empresas
           </a>
 

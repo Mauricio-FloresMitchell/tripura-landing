@@ -210,7 +210,7 @@ function Contact() {
 
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-20 rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
+      <div id="empresas" className="relative max-w-6xl mx-auto mt-20 rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
 
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
 
