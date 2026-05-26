@@ -3,6 +3,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Services from './sections/Services'
 import Contact from './sections/Contact'
+import FAQ from './sections/FAQ'
 import Footer from './sections/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
 
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Services />
       <Contact />
+      <FAQ />
       <Footer />
       <WhatsAppFloat />
     </main>

@@ -1,29 +1,29 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import logo from "../assets/logo.svg";
+import logo from '../assets/logo.svg'
 
 
 function Footer() {
   return (
-    <footer className="bg-slate-950 text-white pt-24 pb-10 px-6">
+    <footer className="bg-[#07162D] text-white pt-24 pb-10 px-6 border-t border-[#BCD0E3]/10">
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
 
         {/* INFO */}
         <div>
 
-        <img
-          src={logo}
-          alt="TRIPURA"
-          className="h-24 w-24 object-contain"
-        />
+          <img
+            src={logo}
+            alt="TRIPURA"
+            className="mb-6 h-24 w-24 object-contain"
+          />
 
-          <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
+          <p className="text-[#BCD0E3] text-lg leading-relaxed mb-8 max-w-xl">
             Agua purificada y alcalina con servicio confiable
             a domicilio para hogares y empresas.
           </p>
 
-          <div className="space-y-4 text-slate-300">
+          <div className="space-y-4 text-white/80">
 
             <p>
               📍 Consolidada 95, Col. Vista Hermosa,
@@ -52,7 +52,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook de Tripura"
-              className="w-12 h-12 rounded-full bg-slate-800 hover:bg-sky-600 transition flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#239CBC] transition flex items-center justify-center border border-[#BCD0E3]/10"
             >
               <FaFacebookF />
             </a>
@@ -62,7 +62,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram de Tripura"
-              className="w-12 h-12 rounded-full bg-slate-800 hover:bg-sky-600 transition flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#239CBC] transition flex items-center justify-center border border-[#BCD0E3]/10"
             >
               <FaInstagram />
             </a>
@@ -72,7 +72,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp de Tripura"
-              className="w-12 h-12 rounded-full bg-slate-800 hover:bg-green-500 transition flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#239CBC] transition flex items-center justify-center border border-[#BCD0E3]/10"
             >
               <FaWhatsapp />
             </a>
@@ -82,7 +82,7 @@ function Footer() {
         </div>
 
         {/* MAP */}
-        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px]">
+        <div className="rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-[#BCD0E3]/20 min-h-[400px]">
 
           <iframe
             title="Mapa Tripura"
@@ -100,9 +100,9 @@ function Footer() {
       </div>
 
       {/* BOTTOM */}
-      <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="border-t border-[#BCD0E3]/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
-        <p className="text-slate-500 text-sm">
+        <p className="text-[#BCD0E3]/70 text-sm">
           © 2026 Tripura. Todos los derechos reservados.
         </p>
 
@@ -110,14 +110,14 @@ function Footer() {
 
           <Link
             to="/privacy"
-            className="text-slate-400 hover:text-sky-400 transition"
+            className="text-[#BCD0E3]/80 hover:text-white transition"
           >
             Aviso de privacidad
           </Link>
 
           <Link
             to="/terms"
-            className="text-slate-400 hover:text-sky-400 transition"
+            className="text-[#BCD0E3]/80 hover:text-white transition"
           >
             Términos y condiciones
           </Link>

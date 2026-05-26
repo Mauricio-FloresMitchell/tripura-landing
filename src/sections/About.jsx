@@ -1,3 +1,5 @@
+import nosotrosImage from '../assets/nosotros-image.jpg'
+
 function About() {
   return (
     <section id="nosotros" className="py-32 px-6 bg-white">
@@ -6,9 +8,9 @@ function About() {
 
         <div>
           <img
-            src="https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=1200&auto=format&fit=crop"
+            src={nosotrosImage}
             alt="Tripura"
-            className="rounded-3xl shadow-xl"
+            className="w-full rounded-3xl object-cover shadow-xl"
           />
         </div>
 
