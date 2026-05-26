@@ -76,7 +76,8 @@ function Contact() {
   }
 
   return (
-    <section id="contacto" className="relative overflow-hidden py-32 px-6 bg-[#0C1F3F]">
+    <>
+      <section id="contacto" className="relative overflow-hidden py-32 px-6 bg-[#0C1F3F]">
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(35,156,188,0.24),transparent_32%)]"></div>
       <div className="absolute bottom-[-120px] right-[-80px] h-72 w-96 rounded-[50%] border border-[#BCD0E3]/20 bg-[#BCD0E3]/10"></div>
@@ -210,7 +211,14 @@ function Contact() {
 
       </div>
 
-      <div id="empresas" className="relative max-w-6xl mx-auto mt-20 rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
+      </section>
+
+      <section id="empresas" className="relative overflow-hidden px-6 pb-32 bg-[#0C1F3F]">
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(35,156,188,0.24),transparent_32%)]"></div>
+        <div className="absolute bottom-[-120px] right-[-80px] h-72 w-96 rounded-[50%] border border-[#BCD0E3]/20 bg-[#BCD0E3]/10"></div>
+
+        <div className="relative max-w-6xl mx-auto rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
 
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
 
@@ -324,9 +332,10 @@ function Contact() {
 
         </div>
 
-      </div>
+        </div>
 
-    </section>
+      </section>
+    </>
   )
 }
 
