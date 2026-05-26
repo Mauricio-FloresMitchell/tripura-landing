@@ -27,7 +27,7 @@ function Footer() {
 
             <p>
               📍 Consolidada 95, Col. Vista Hermosa,
-              54080 Ciudad de México, Méx.
+              54080 Estado de México, Méx.
             </p>
 
             <p>
