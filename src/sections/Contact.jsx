@@ -34,27 +34,30 @@ function Contact() {
   }
 
   return (
-    <section id="contacto" className="py-32 px-6 bg-white">
+    <section id="contacto" className="relative overflow-hidden py-32 px-6 bg-[#0C1F3F]">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(35,156,188,0.24),transparent_32%)]"></div>
+      <div className="absolute bottom-[-120px] right-[-80px] h-72 w-96 rounded-[50%] border border-[#BCD0E3]/20 bg-[#BCD0E3]/10"></div>
+
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* INFO */}
         <div>
 
-          <p className="uppercase tracking-[0.3em] text-sky-600 font-semibold mb-4">
+          <p className="uppercase tracking-[0.3em] text-[#BCD0E3] font-semibold mb-4">
             Pedido rápido
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-8">
             Recibe agua hasta tu hogar
           </h2>
 
-          <p className="text-slate-600 text-lg leading-relaxed mb-8">
+          <p className="text-[#BCD0E3] text-lg leading-relaxed mb-8">
             Realiza tu pedido de manera rápida y sencilla.
             Completa el formulario y te atenderemos vía WhatsApp.
           </p>
 
-          <div className="space-y-4 text-slate-700">
+          <div className="space-y-4 text-white/90">
 
             <p>✅ Servicio a domicilio</p>
             <p>✅ Atención rápida</p>
@@ -66,13 +69,13 @@ function Contact() {
         </div>
 
         {/* FORM */}
-        <div className="bg-sky-50 rounded-3xl p-8 shadow-xl border border-sky-100">
+        <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-[#0C1F3F]/40 border border-[#BCD0E3]">
 
           <div className="space-y-6">
 
             {/* Nombre */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
+              <label className="block mb-2 font-semibold text-[#0C1F3F]">
                 Nombre
               </label>
 
@@ -82,13 +85,13 @@ function Contact() {
                 value={formData.nombre}
                 onChange={handleChange}
                 placeholder="Tu nombre"
-                className="w-full px-5 py-4 rounded-2xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               />
             </div>
 
             {/* Teléfono */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
+              <label className="block mb-2 font-semibold text-[#0C1F3F]">
                 Teléfono
               </label>
 
@@ -98,13 +101,13 @@ function Contact() {
                 value={formData.telefono}
                 onChange={handleChange}
                 placeholder="55XXXXXXXX"
-                className="w-full px-5 py-4 rounded-2xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               />
             </div>
 
             {/* Dirección */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
+              <label className="block mb-2 font-semibold text-[#0C1F3F]">
                 Dirección
               </label>
 
@@ -114,13 +117,13 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="Escribe tu dirección"
                 rows="4"
-                className="w-full px-5 py-4 rounded-2xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               ></textarea>
             </div>
 
             {/* Producto */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
+              <label className="block mb-2 font-semibold text-[#0C1F3F]">
                 Producto
               </label>
 
@@ -128,7 +131,7 @@ function Contact() {
                 name="producto"
                 value={formData.producto}
                 onChange={handleChange}
-                className="w-full px-5 py-4 rounded-2xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               >
                 <option>Agua Purificada</option>
                 <option>Agua Alcalina</option>
@@ -137,7 +140,7 @@ function Contact() {
 
             {/* Cantidad */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
+              <label className="block mb-2 font-semibold text-[#0C1F3F]">
                 Cantidad de garrafones
               </label>
 
@@ -147,14 +150,14 @@ function Contact() {
                 value={formData.cantidad}
                 onChange={handleChange}
                 min="1"
-                className="w-full px-5 py-4 rounded-2xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               />
             </div>
 
             {/* BUTTON */}
             <button
               onClick={handleWhatsApp}
-              className="w-full bg-sky-600 hover:bg-sky-500 text-white py-5 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-[1.02]"
+              className="w-full bg-[#239CBC] hover:bg-[#0F77B8] text-white py-5 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-[#239CBC]/20"
             >
               Enviar pedido por WhatsApp
             </button>
