@@ -1,9 +1,12 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
+const whatsappMessage = 'Hola, vengo de la página web de TRIPURA. Quiero hacer un pedido de agua.'
+const whatsappUrl = `https://wa.me/527206073820?text=${encodeURIComponent(whatsappMessage)}`
+
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/527206073820"
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Pedir por WhatsApp"

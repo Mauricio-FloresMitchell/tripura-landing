@@ -7,7 +7,7 @@ function Contact() {
     telefono: '',
     direccion: '',
     producto: 'Agua Purificada',
-    cantidad: 1,
+    cantidad: '1',
   })
 
   const [businessData, setBusinessData] = useState({
@@ -18,23 +18,68 @@ function Contact() {
     mensaje: '',
   })
 
+  const [formError, setFormError] = useState('')
+  const [businessError, setBusinessError] = useState('')
+
+  const getNumericValue = (value, maxLength) => {
+    const digits = value.replace(/\D/g, '')
+    return maxLength ? digits.slice(0, maxLength) : digits
+  }
+
   const handleChange = (e) => {
+    const { name, value } = e.target
+    const nextValue = name === 'telefono'
+      ? getNumericValue(value, 10)
+      : name === 'cantidad'
+        ? getNumericValue(value)
+        : value
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: nextValue
     })
+    setFormError('')
   }
 
   const handleBusinessChange = (e) => {
+    const { name, value } = e.target
+    const nextValue = name === 'telefono'
+      ? getNumericValue(value, 10)
+      : name === 'cantidad'
+        ? getNumericValue(value)
+        : value
+
     setBusinessData({
       ...businessData,
-      [e.target.name]: e.target.value
+      [name]: nextValue
     })
+    setBusinessError('')
   }
 
   const handleWhatsApp = () => {
+    const requiredFields = [
+      formData.nombre,
+      formData.telefono,
+      formData.direccion,
+      formData.cantidad,
+    ]
 
-    const mensaje = `Hola, quiero realizar un pedido de agua.
+    if (requiredFields.some((field) => !String(field).trim())) {
+      setFormError('Completa nombre, teléfono, dirección y cantidad.')
+      return
+    }
+
+    if (formData.telefono.length !== 10) {
+      setFormError('El teléfono debe tener exactamente 10 dígitos.')
+      return
+    }
+
+    if (Number(formData.cantidad) < 1) {
+      setFormError('La cantidad debe ser mayor a 0.')
+      return
+    }
+
+    const mensaje = `Hola, vengo de la página web de TRIPURA. Quiero realizar un pedido de agua.
 
 👤 Nombre: ${formData.nombre}
 📞 Teléfono: ${formData.telefono}
@@ -56,12 +101,22 @@ function Contact() {
       businessData.cantidad,
     ]
 
-    if (requiredFields.some((field) => !field.trim())) {
-      window.alert('Completa empresa o persona, ubicación, teléfono y cantidad aproximada.')
+    if (requiredFields.some((field) => !String(field).trim())) {
+      setBusinessError('Completa empresa o persona, ubicación, teléfono y cantidad aproximada.')
       return
     }
 
-    const mensaje = `Hola, quiero información para un pedido empresarial o recurrente.
+    if (businessData.telefono.length !== 10) {
+      setBusinessError('El teléfono debe tener exactamente 10 dígitos.')
+      return
+    }
+
+    if (Number(businessData.cantidad) < 1) {
+      setBusinessError('La cantidad aproximada debe ser mayor a 0.')
+      return
+    }
+
+    const mensaje = `Hola, vengo de la página web de TRIPURA. Quiero información para un pedido empresarial o recurrente.
 
 🏢 Empresa o persona: ${businessData.empresa}
 📍 Ubicación: ${businessData.ubicacion}
@@ -76,6 +131,7 @@ function Contact() {
   }
 
   return (
+    <>
     <section id="contacto" className="relative overflow-hidden py-32 px-6 bg-[#0C1F3F]">
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(35,156,188,0.24),transparent_32%)]"></div>
@@ -143,6 +199,9 @@ function Contact() {
                 value={formData.telefono}
                 onChange={handleChange}
                 placeholder="55XXXXXXXX"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                maxLength="10"
                 className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               />
             </div>
@@ -187,14 +246,21 @@ function Contact() {
               </label>
 
               <input
-                type="number"
+                type="text"
                 name="cantidad"
                 value={formData.cantidad}
                 onChange={handleChange}
-                min="1"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#239CBC]"
               />
             </div>
+
+            {formError && (
+              <p className="rounded-2xl border border-[#CC2021]/30 bg-[#CC2021]/10 px-4 py-3 text-sm font-semibold text-[#CC2021]">
+                {formError}
+              </p>
+            )}
 
             {/* BUTTON */}
             <button
@@ -210,7 +276,14 @@ function Contact() {
 
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-20 rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
+    </section>
+
+    <section id="empresas" className="relative overflow-hidden px-6 pb-32 bg-[#0C1F3F]">
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(35,156,188,0.24),transparent_32%)]"></div>
+      <div className="absolute bottom-[-120px] right-[-80px] h-72 w-96 rounded-[50%] border border-[#BCD0E3]/20 bg-[#BCD0E3]/10"></div>
+
+      <div className="relative max-w-6xl mx-auto rounded-3xl border border-[#CC2021]/30 bg-white/95 p-8 shadow-2xl shadow-[#0C1F3F]/40">
 
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
 
@@ -276,6 +349,9 @@ function Contact() {
                   value={businessData.telefono}
                   onChange={handleBusinessChange}
                   placeholder="55XXXXXXXX"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  maxLength="10"
                   className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#CC2021]"
                 />
               </div>
@@ -286,12 +362,13 @@ function Contact() {
                 </label>
 
                 <input
-                  type="number"
+                  type="text"
                   name="cantidad"
                   value={businessData.cantidad}
                   onChange={handleBusinessChange}
-                  min="1"
                   placeholder="Ej. 10"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                   className="w-full px-5 py-4 rounded-2xl border border-[#BCD0E3] focus:outline-none focus:ring-2 focus:ring-[#CC2021]"
                 />
               </div>
@@ -313,6 +390,12 @@ function Contact() {
 
             </div>
 
+            {businessError && (
+              <p className="mt-6 rounded-2xl border border-[#CC2021]/30 bg-[#CC2021]/10 px-4 py-3 text-sm font-semibold text-[#CC2021]">
+                {businessError}
+              </p>
+            )}
+
             <button
               onClick={handleBusinessWhatsApp}
               className="mt-6 w-full rounded-2xl border border-[#CC2021]/40 bg-[#CC2021] py-5 text-lg font-semibold text-white shadow-lg shadow-[#CC2021]/20 transition-all duration-300 hover:scale-[1.02] hover:bg-[#A91B1C]"
@@ -327,6 +410,7 @@ function Contact() {
       </div>
 
     </section>
+    </>
   )
 }
 

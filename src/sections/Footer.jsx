@@ -2,6 +2,9 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
+const whatsappMessage = 'Hola, vengo de la página web de TRIPURA. Quiero hacer un pedido de agua.'
+const whatsappUrl = `https://wa.me/527206073820?text=${encodeURIComponent(whatsappMessage)}`
+
 
 function Footer() {
   return (
@@ -68,7 +71,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://wa.me/527206073820"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp de Tripura"
