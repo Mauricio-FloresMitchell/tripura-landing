@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import logo from "../assets/logo.svg";
 
 
 function Footer() {
@@ -11,9 +12,11 @@ function Footer() {
         {/* INFO */}
         <div>
 
-          <h2 className="text-4xl font-black mb-6">
-            TRIPURA
-          </h2>
+        <img
+          src={logo}
+          alt="TRIPURA"
+          className="h-24 w-24 object-contain"
+        />
 
           <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
             Agua purificada y alcalina con servicio confiable
