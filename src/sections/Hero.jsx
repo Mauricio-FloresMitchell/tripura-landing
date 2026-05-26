@@ -1,5 +1,8 @@
 import heroImage from '../assets/hero-image.jpg'
 
+const whatsappMessage = 'Hola, vengo de la página web de TRIPURA. Quiero hacer un pedido de agua.'
+const whatsappUrl = `https://wa.me/527206073820?text=${encodeURIComponent(whatsappMessage)}`
+
 function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-[#0C1F3F] px-5 pt-32 pb-16 md:px-6 md:pt-24 md:pb-0">
@@ -32,7 +35,7 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
 
             <a
-              href="https://wa.me/527206073820"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#239CBC] hover:bg-[#0F77B8] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 text-center shadow-xl shadow-[#239CBC]/25"
