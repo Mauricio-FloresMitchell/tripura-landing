@@ -1,7 +1,7 @@
 import heroImage from '../assets/hero-image.jpg'
 
 const whatsappMessage = 'Hola, vengo de la página web de TRIPURA. Quiero hacer un pedido de agua.'
-const whatsappUrl = `https://wa.me/527206073820?text=${encodeURIComponent(whatsappMessage)}`
+const whatsappUrl = `https://wa.me/5215529718974?text=${encodeURIComponent(whatsappMessage)}`
 
 function Hero() {
   return (
