@@ -88,7 +88,7 @@ function Contact() {
 🛒 Cantidad: ${formData.cantidad} garrafón(es)`
 
     window.open(
-      `https://wa.me/527206073820?text=${encodeURIComponent(mensaje)}`,
+      `https://wa.me/5215529718974?text=${encodeURIComponent(mensaje)}`,
       '_blank'
     )
   }
@@ -125,7 +125,7 @@ function Contact() {
 📝 Mensaje adicional: ${businessData.mensaje || 'Sin mensaje adicional'}`
 
     window.open(
-      `https://wa.me/527206073820?text=${encodeURIComponent(mensaje)}`,
+      `https://wa.me/5215529718974?text=${encodeURIComponent(mensaje)}`,
       '_blank'
     )
   }
